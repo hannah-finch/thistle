@@ -1,6 +1,7 @@
-[gd_scene load_steps=22 format=3 uid="uid://bjbbivkkphi2q"]
+[gd_scene load_steps=25 format=3 uid="uid://bjbbivkkphi2q"]
 
 [ext_resource type="Script" path="res://scripts/Player.gd" id="1_4giq2"]
+[ext_resource type="Texture2D" uid="uid://dg3o08mw8swcb" path="res://tiles/filler annimation.png" id="2_gcarj"]
 [ext_resource type="Texture2D" uid="uid://d0rjtxkko0n2d" path="res://tiles/character 1 back.png" id="2_kdnak"]
 [ext_resource type="Texture2D" uid="uid://d3qd53cjk1pxt" path="res://tiles/character 1.png" id="2_uxb7t"]
 [ext_resource type="Texture2D" uid="uid://cr0w6xms1gtrs" path="res://tiles/character 1 left.png" id="4_y1q40"]
@@ -11,6 +12,14 @@
 [ext_resource type="Script" path="res://scripts/state_machine/chopping_state.gd" id="9_h8x75"]
 [ext_resource type="Script" path="res://scripts/state_machine/watering_state.gd" id="10_7x8y0"]
 [ext_resource type="Script" path="res://scripts/state_machine/walk_state.gd" id="11_cqqf7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5kb4r"]
+atlas = ExtResource("2_gcarj")
+region = Rect2(0, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x2har"]
+atlas = ExtResource("2_gcarj")
+region = Rect2(32, 0, 32, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ucs4y"]
 atlas = ExtResource("2_kdnak")
@@ -46,6 +55,17 @@ region = Rect2(32, 0, 32, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4ly4a"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5kb4r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x2har")
+}],
+"loop": false,
+"name": &"filler",
+"speed": 1.4
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ucs4y")
@@ -101,7 +121,7 @@ current_tool = 2
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_4ly4a")
-animation = &"idle_front"
+animation = &"filler"
 autoplay = "idle_front"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
