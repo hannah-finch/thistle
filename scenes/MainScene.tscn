@@ -60,4 +60,3 @@ tile_set = SubResource("TileSet_rt7bk")
 
 [node name="Player" parent="." instance=ExtResource("3_aespb")]
 position = Vector2(359, 242)
-current_tool = 1
