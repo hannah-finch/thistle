@@ -16,29 +16,31 @@ shader_parameter/shake_speed = 20.0
 atlas = ExtResource("1_nojbv")
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ewuqq"]
-radius = 6.0
+radius = 8.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hgo4d"]
 size = Vector2(15, 39)
 
 [node name="Tree" type="Sprite2D"]
 material = SubResource("ShaderMaterial_86gb4")
-position = Vector2(0, -48)
+position = Vector2(0, 5)
 texture = SubResource("AtlasTexture_qaywv")
+offset = Vector2(0, -59)
 script = ExtResource("2_8onum")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-1, 56)
+position = Vector2(-1, -5)
 shape = SubResource("CircleShape2D_ewuqq")
 
 [node name="HurtComponent" parent="." instance=ExtResource("2_5o3gu")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtComponent"]
-position = Vector2(-1.5, 41.5)
+position = Vector2(-1, -18)
 shape = SubResource("RectangleShape2D_hgo4d")
 debug_color = Color(0.802022, 0.419069, 3.85046e-07, 0.42)
 
 [node name="DamageComponent" parent="." instance=ExtResource("4_s77o8")]
+position = Vector2(0, -38)
 max_damage = 3

@@ -22,20 +22,21 @@ radius = 15.0333
 
 [node name="Rock" type="Sprite2D"]
 material = SubResource("ShaderMaterial_bspv8")
-position = Vector2(0, -8)
+position = Vector2(0, 1)
 texture = SubResource("AtlasTexture_ktqch")
+offset = Vector2(0, -10)
 script = ExtResource("2_g34tt")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(1, 1)
+position = Vector2(1, -7)
 shape = SubResource("CircleShape2D_jxmq8")
 
 [node name="HurtComponent" parent="." instance=ExtResource("3_l4co6")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtComponent"]
-position = Vector2(1, 1)
+position = Vector2(1, -9)
 shape = SubResource("CircleShape2D_tegcs")
 debug_color = Color(0.973451, 0, 0.433894, 0.42)
 
