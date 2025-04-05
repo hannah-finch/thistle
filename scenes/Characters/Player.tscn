@@ -1,11 +1,11 @@
 [gd_scene load_steps=35 format=3 uid="uid://bjbbivkkphi2q"]
 
 [ext_resource type="Script" path="res://scripts/Player.gd" id="1_4giq2"]
-[ext_resource type="Texture2D" uid="uid://dg3o08mw8swcb" path="res://tiles/filler annimation.png" id="2_gcarj"]
-[ext_resource type="Texture2D" uid="uid://d0rjtxkko0n2d" path="res://tiles/character 1 back.png" id="2_kdnak"]
-[ext_resource type="Texture2D" uid="uid://d3qd53cjk1pxt" path="res://tiles/character 1.png" id="2_uxb7t"]
-[ext_resource type="Texture2D" uid="uid://cr0w6xms1gtrs" path="res://tiles/character 1 left.png" id="4_y1q40"]
-[ext_resource type="Texture2D" uid="uid://lbkjc70pluyb" path="res://tiles/character 1 right.png" id="5_lvsi5"]
+[ext_resource type="Texture2D" uid="uid://dg3o08mw8swcb" path="res://assets/filler annimation.png" id="2_gcarj"]
+[ext_resource type="Texture2D" uid="uid://d0rjtxkko0n2d" path="res://assets/characters/character 1 back.png" id="2_kdnak"]
+[ext_resource type="Texture2D" uid="uid://d3qd53cjk1pxt" path="res://assets/characters/character 1.png" id="2_uxb7t"]
+[ext_resource type="Texture2D" uid="uid://cr0w6xms1gtrs" path="res://assets/characters/character 1 left.png" id="4_y1q40"]
+[ext_resource type="Texture2D" uid="uid://lbkjc70pluyb" path="res://assets/characters/character 1 right.png" id="5_lvsi5"]
 [ext_resource type="Script" path="res://scripts/state_machine/node_state_machine.gd" id="6_bw0yp"]
 [ext_resource type="Script" path="res://scripts/state_machine/idle_state.gd" id="7_8u3ct"]
 [ext_resource type="Script" path="res://scripts/state_machine/tilling_state.gd" id="8_6vg4q"]
@@ -188,8 +188,8 @@ animations = [{
 "speed": 1.4
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_bbm7g"]
-size = Vector2(12, 6)
+[sub_resource type="CircleShape2D" id="CircleShape2D_h0nip"]
+radius = 6.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2eucu"]
 radius = 5.0
@@ -206,8 +206,8 @@ animation = &"chopping_right"
 autoplay = "idle_front"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -4)
-shape = SubResource("RectangleShape2D_bbm7g")
+position = Vector2(0, -6)
+shape = SubResource("CircleShape2D_h0nip")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2.8, 2.8)

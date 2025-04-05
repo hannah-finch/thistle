@@ -1,9 +1,9 @@
 [gd_scene load_steps=10 format=3 uid="uid://by1toijx7d7j"]
 
-[ext_resource type="Texture2D" uid="uid://benrdaj458lhs" path="res://tiles/tree.png" id="1_nojbv"]
+[ext_resource type="Texture2D" uid="uid://benrdaj458lhs" path="res://assets/objects/tree.png" id="1_nojbv"]
 [ext_resource type="PackedScene" uid="uid://byevqayi253nv" path="res://scenes/Components/hurt_component.tscn" id="2_5o3gu"]
 [ext_resource type="Script" path="res://scenes/Objects/Trees/tree.gd" id="2_8onum"]
-[ext_resource type="Shader" path="res://scenes/Objects/Trees/tree_shake.gdshader" id="4_jm07h"]
+[ext_resource type="Shader" path="res://scenes/Objects/shake.gdshader" id="4_jm07h"]
 [ext_resource type="PackedScene" uid="uid://dsawpd6c05ru4" path="res://scenes/Components/damage_component.tscn" id="4_s77o8"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_86gb4"]
