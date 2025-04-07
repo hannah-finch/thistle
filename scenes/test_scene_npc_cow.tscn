@@ -1,15 +1,15 @@
-[gd_scene load_steps=19 format=4 uid="uid://d0rwbbsjychex"]
+[gd_scene load_steps=19 format=4 uid="uid://rkl2xc8sqb2w"]
 
-[ext_resource type="Texture2D" uid="uid://brbonhlns6fi2" path="res://assets/tilesets/grass.png" id="1_mx5qk"]
-[ext_resource type="PackedScene" uid="uid://d0hg4uam3iog1" path="res://scenes/Objects/Rocks/rock.tscn" id="2_tfb1t"]
-[ext_resource type="PackedScene" uid="uid://by1toijx7d7j" path="res://scenes/Objects/Trees/tree_1.tscn" id="3_c32cl"]
-[ext_resource type="Texture2D" uid="uid://85jq2lx6bt2y" path="res://icon.svg" id="4_sdld4"]
-[ext_resource type="Texture2D" uid="uid://benrdaj458lhs" path="res://assets/objects/tree 1.png" id="5_bm0yi"]
-[ext_resource type="PackedScene" uid="uid://7hs7mtv7r05c" path="res://scenes/Characters/chicken/chicken.tscn" id="6_37mcu"]
-[ext_resource type="PackedScene" uid="uid://bjbbivkkphi2q" path="res://scenes/Characters/Player.tscn" id="6_ss1bm"]
+[ext_resource type="Texture2D" uid="uid://brbonhlns6fi2" path="res://assets/tilesets/grass.png" id="1_pr334"]
+[ext_resource type="PackedScene" uid="uid://d0hg4uam3iog1" path="res://scenes/Objects/Rocks/rock.tscn" id="2_s38fw"]
+[ext_resource type="PackedScene" uid="uid://by1toijx7d7j" path="res://scenes/Objects/Trees/tree_1.tscn" id="3_yai2l"]
+[ext_resource type="Texture2D" uid="uid://85jq2lx6bt2y" path="res://icon.svg" id="4_gx8q2"]
+[ext_resource type="Texture2D" uid="uid://benrdaj458lhs" path="res://assets/objects/tree 1.png" id="5_3eya5"]
+[ext_resource type="PackedScene" uid="uid://bjbbivkkphi2q" path="res://scenes/Characters/Player.tscn" id="6_h5c78"]
+[ext_resource type="PackedScene" uid="uid://b8akx6k55ctny" path="res://scenes/Characters/cow/cow.tscn" id="7_3vltt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ogoju"]
-texture = ExtResource("1_mx5qk")
+texture = ExtResource("1_pr334")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 1:0/0 = 0
@@ -39,11 +39,11 @@ sources/0 = SubResource("TileSetAtlasSource_ogoju")
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_tw473"]
 resource_name = "IDK"
-scenes/1/scene = ExtResource("2_tfb1t")
-scenes/2/scene = ExtResource("3_c32cl")
+scenes/1/scene = ExtResource("2_s38fw")
+scenes/2/scene = ExtResource("3_yai2l")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7hwxe"]
-texture = ExtResource("4_sdld4")
+texture = ExtResource("4_gx8q2")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 1:0/0 = 0
@@ -63,7 +63,7 @@ texture_region_size = Vector2i(32, 32)
 0:3/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6ulgp"]
-texture = ExtResource("5_bm0yi")
+texture = ExtResource("5_3eya5")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/y_sort_origin = 25
@@ -77,7 +77,7 @@ sources/1 = SubResource("TileSetAtlasSource_7hwxe")
 sources/2 = SubResource("TileSetAtlasSource_6ulgp")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gme5h"]
-texture = ExtResource("4_sdld4")
+texture = ExtResource("4_gx8q2")
 texture_region_size = Vector2i(32, 32)
 3:2/0 = 0
 6:1/0 = 0
@@ -91,18 +91,18 @@ tile_size = Vector2i(32, 32)
 sources/0 = SubResource("TileSetAtlasSource_gme5h")
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_u6xxw"]
-scenes/1/scene = ExtResource("2_tfb1t")
-scenes/2/scene = ExtResource("3_c32cl")
+scenes/1/scene = ExtResource("2_s38fw")
+scenes/2/scene = ExtResource("3_yai2l")
 
 [sub_resource type="TileSet" id="TileSet_cqo1u"]
 sources/0 = SubResource("TileSetScenesCollectionSource_u6xxw")
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_xrar6"]
-vertices = PackedVector2Array(649.898, 298.242, 400.938, 397.281, 400.023, 153.367, 528.758, 113.758)
+vertices = PackedVector2Array(649.898, 298.242, 396.297, 399.117, 289.273, 153.711, 528.227, 112.953)
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(390, 146, 391, 412, 665, 303, 533, 102)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(275, 146, 391, 412, 665, 303, 533, 102)])
 
-[node name="TestSceneNPCChicken" type="Node2D"]
+[node name="TestSceneNPCCow" type="Node2D"]
 y_sort_enabled = true
 
 [node name="GameTileMap" type="Node2D" parent="."]
@@ -123,35 +123,24 @@ tile_set = SubResource("TileSet_uy54l")
 y_sort_enabled = true
 tile_set = SubResource("TileSet_cqo1u")
 
-[node name="Player" parent="." instance=ExtResource("6_ss1bm")]
+[node name="Player" parent="." instance=ExtResource("6_h5c78")]
 position = Vector2(359, 242)
 
-[node name="Chickens" type="Node2D" parent="."]
+[node name="Cows" type="Node2D" parent="."]
 
-[node name="NavigationRegion2D" type="NavigationRegion2D" parent="Chickens"]
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="Cows"]
 position = Vector2(-1, -12)
 navigation_polygon = SubResource("NavigationPolygon_xrar6")
+navigation_layers = 2
 
-[node name="Chicken" parent="Chickens" instance=ExtResource("6_37mcu")]
-position = Vector2(426, 231)
+[node name="Cow" parent="." instance=ExtResource("7_3vltt")]
+position = Vector2(442, 241)
 
-[node name="Chicken2" parent="Chickens" instance=ExtResource("6_37mcu")]
-position = Vector2(447, 282)
+[node name="Cow2" parent="." instance=ExtResource("7_3vltt")]
+position = Vector2(411, 307)
 
-[node name="Chicken3" parent="Chickens" instance=ExtResource("6_37mcu")]
-position = Vector2(439, 174)
+[node name="Cow3" parent="." instance=ExtResource("7_3vltt")]
+position = Vector2(394, 199)
 
-[node name="Chicken4" parent="Chickens" instance=ExtResource("6_37mcu")]
-position = Vector2(483, 237)
-
-[node name="Chicken5" parent="Chickens" instance=ExtResource("6_37mcu")]
-position = Vector2(498, 176)
-
-[node name="Chicken6" parent="Chickens" instance=ExtResource("6_37mcu")]
-position = Vector2(516, 292)
-
-[node name="Chicken7" parent="Chickens" instance=ExtResource("6_37mcu")]
-position = Vector2(436, 343)
-
-[node name="Chicken8" parent="Chickens" instance=ExtResource("6_37mcu")]
-position = Vector2(554, 237)
+[node name="Cow4" parent="." instance=ExtResource("7_3vltt")]
+position = Vector2(509, 283)

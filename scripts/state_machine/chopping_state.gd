@@ -33,7 +33,7 @@ func _on_enter() -> void:
 		hit_component_collision_shape.position = Vector2(11,-32)
 	elif player.player_direction == Vector2.DOWN:
 		animated_sprite_2d.play("chopping_front")
-		hit_component_collision_shape.position = Vector2(0,0)
+		hit_component_collision_shape.position = Vector2(1,-1)
 		
 	elif player.player_direction == Vector2.LEFT:
 		animated_sprite_2d.play("chopping_left")
@@ -41,7 +41,7 @@ func _on_enter() -> void:
 		
 	else:
 		animated_sprite_2d.play("chopping_front")
-		hit_component_collision_shape.position = Vector2(0,0)
+		hit_component_collision_shape.position = Vector2(1,-1)
 	
 	
 	hit_component_collision_shape.disabled = false

@@ -16,6 +16,7 @@ shader_parameter/shake_speed = 20.0
 atlas = ExtResource("1_cg1lc")
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jxmq8"]
+radius = 9.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_tegcs"]
 radius = 15.0333
