@@ -19,7 +19,7 @@ atlas = ExtResource("1_cg1lc")
 radius = 9.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_tegcs"]
-radius = 15.0333
+radius = 11.0
 
 [node name="Rock" type="Sprite2D"]
 material = SubResource("ShaderMaterial_bspv8")
@@ -39,6 +39,7 @@ tool = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtComponent"]
 position = Vector2(1, -9)
+scale = Vector2(0.989637, 1)
 shape = SubResource("CircleShape2D_tegcs")
 debug_color = Color(0.973451, 0, 0.433894, 0.42)
 

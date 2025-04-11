@@ -30,6 +30,9 @@ func _on_next_transitions() -> void:
 	if player.current_tool == DataTypes.Tools.AxeWood && GameInputEvents.use_tool():
 		transition.emit("Chopping")
 		
+	if player.current_tool == DataTypes.Tools.Pickaxe && GameInputEvents.use_tool():
+		transition.emit("Pickaxe")
+		
 	if player.current_tool == DataTypes.Tools.TillGround && GameInputEvents.use_tool():
 		transition.emit("Tilling")
 	

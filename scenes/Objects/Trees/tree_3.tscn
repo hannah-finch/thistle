@@ -19,7 +19,7 @@ atlas = ExtResource("2_3kvh5")
 radius = 7.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hgo4d"]
-size = Vector2(15, 39)
+size = Vector2(15, 18.875)
 
 [node name="Tree_3" type="Sprite2D"]
 material = SubResource("ShaderMaterial_86gb4")
@@ -37,7 +37,7 @@ shape = SubResource("CircleShape2D_ewuqq")
 [node name="HurtComponent" parent="." instance=ExtResource("4_f4vqc")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtComponent"]
-position = Vector2(0, -17)
+position = Vector2(0, -6.5625)
 shape = SubResource("RectangleShape2D_hgo4d")
 debug_color = Color(0.802022, 0.419069, 3.85046e-07, 0.42)
 
